@@ -1,0 +1,135 @@
+/* body {
+  top: 0px;
+  left: 0px;
+  width: 750px;
+  height: 1925px;
+  background: #f1f2f6 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+div.candy-title {
+  top: 110px;
+  left: 270px;
+  width: 211px;
+  height: 48px;
+  text-align: left;
+  font: normal normal bold 40px/48px Roboto;
+  letter-spacing: 20px;
+  color: #191919;
+  opacity: 1;
+}
+
+hr.candy-title-under {
+  top: 166px;
+  left: 40px;
+  width: 670px;
+  height: 0px;
+  border: 1px solid #191919;
+  opacity: 1;
+} */
+
+/* @keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+article {
+  width: 400px; height: 400px; background: blue; margin: 100px auto;
+  animation-name:rotation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  transform: rotate(50deg);
+  animation-delay: 0s;
+}
+
+article:hover {
+  /* animation-play-state: paused;
+   animation-duration: 4s;
+} */
+
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0px auto;
+  position: relative;
+}
+
+header .inner h1 {
+  position: absolute;
+  left: 0px;
+  bottom: 15px;
+}
+
+header .inner h1 a {
+  font: bold 24px/1 "arial";
+  color: #444;
+}
+
+header .inner .util li {
+  float: left;
+}
+
+header .inner .util {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+header .inner .util li a {
+  display: block;
+  font: 12px/1 "arial";
+  color: #999;
+  padding: 0px 10px;
+}
+
+header .inner #gnb {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+header .inner #gnb li {
+  float: left;
+}
+
+header .inner #gnb li a {
+  display: block;
+  font: bold 15px/1 "arial";
+  color: #555;
+  padding: 20px 40px;
+  transition: all 0.5s;
+}
+
+header .inner #gnb li a:hover {
+  background: #555;
+  color: #fff;
+}
+

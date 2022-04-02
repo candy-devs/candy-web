@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Info List Item</title>
+
+    <style>
+      @charset "utf-8";
+
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      article.article-header-item {
+        padding: 16px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      div.article-hearder-item-outer-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      div.aritcle-header-item-inner-left {
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      div.article-header-title {
+        font-weight: bold;
+        text-align: left;
+        font: normal normal bold 28px/41px Noto Sans CJK KR;
+        letter-spacing: 0px;
+      }
+
+      div.article-header-body {
+        margin: 5px 0 0 0;
+      }
+
+      div.article-header-body-thumb {
+        margin: 0 0 0 16px;
+        box-sizing: border-box;
+        width: 120px;
+        height: 120px;
+        border-radius: 5px;
+        background: #ebebeb 0% 0% no-repeat padding-box;
+      }
+
+      div.aritcle-header-item-inner-bottom {
+        margin: 16px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      div.article-header-item-status {
+        /* width: 30px;
+        height: 30px; */
+        display: flex;
+        flex-direction: row;
+        padding: 0 8px 0 8px;
+      }
+
+      div.article-header-item-stat {
+        display: flex;
+        flex-direction: row;
+        margin: 0 24px 0 0;
+      }
+
+      div.article-header-item-stat-img {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: #ebebeb 0% 0% no-repeat padding-box;
+        margin: 0 2px 0 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="article-header-item">
+      <div class="article-hearder-item-outer-up">
+        <div class="aritcle-header-item-inner-left">
+          <div class="article-header-title">배팅자리만 알면 뭐하나</div>
+          <div class="article-header-body">
+            <div class="article-header-body-text">
+              역방향인데... 이번 3월말 트레이딩 자리잡을곳을 알고도 방향 잡기
+              정말 어렵네요. 그나마 오전에 시그널 떠줘서 고배포지션 익절해놔서
+              다행입
+            </div>
+          </div>
+        </div>
+        <div class="aritcle-header-item-inner-right">
+          <div class="article-header-body-thumb"></div>
+        </div>
+      </div>
+      <div class="aritcle-header-item-inner-bottom">
+        <p>
+          정치사회
+          <span>&#183;</span>
+          2시간 전
+        </p>
+        <div class="article-header-item-status">
+          <div class="article-header-item-stat"> 
+            <div class="article-header-item-stat-img"></div>
+            <p>13K</p>
+            <div class="article-header-item-stat-img"></div>
+            <p>498</p>
+            <div class="article-header-item-stat-img"></div>
+            <p>128</p>
+          </div>
+          <div class="article-header-item-menu">
+            &#8942;
+          </div>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
