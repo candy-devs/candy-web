@@ -1,0 +1,32 @@
+
+
+div.issuse-card {
+  width: 172px;
+  height: 81px;
+  background: #E6E6E6 0% 0% no-repeat padding-box;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin: 0 8px 0 0;
+  border: solid 1px #E6E6E6;
+}
+
+img.issuse-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p.issuse-card-name {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0 0 4px 4px;
+  padding: 0 4px 0 4px;
+  font: normal normal medium 22px/33px Noto Sans CJK KR;
+  border-radius: 14px;
+  background: #E6E6E6E0;
+  border: solid 1px #E6E6E6;
+  /* color: #FFFFFF; */
+}
