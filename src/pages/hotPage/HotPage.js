@@ -4,6 +4,9 @@ import IssuseCard from "../../components/IssuseCard";
 import Navigation from "./Navigation";
 import "./ArticlePage.scss";
 import "./HotPage.scss";
+import { useRef, useState } from "react";
+import CategoryBinarySwitch from "../../components/CategoryBinarySwitch";
+import IosSegmentedControl from "../../components/IosSegmentedControl";
 
 function App() {
   return (
@@ -11,6 +14,29 @@ function App() {
       <Navigation />
       <div class="nav-box-divider"/>
       <div class="issues-title">오늘의 이슈</div>
+      <CategoryBinarySwitch/>
+      <IosSegmentedControl 
+        name="group-2"
+        callback={(val) => {}}
+        controlRef={useRef()}
+        defaultIndex={1}
+        segments={[
+          {
+            label: "왼쪽",
+            value: "first",
+            ref: useRef()
+          },
+          {
+            label: "오른쪽",
+            value: "second",
+            ref: useRef()
+          },
+          // {
+          //   label: "Third",
+          //   value: "third",
+          //   ref: useRef()
+          // }
+        ]}/>
       <div class="issues-area">
         <div class="issues-area-wrap">
           <IssuseCard

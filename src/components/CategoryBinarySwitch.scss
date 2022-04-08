@@ -1,0 +1,38 @@
+
+
+div.binary-switch {
+  padding: 4px 6px 4px 11px;
+  border-radius: 5px;
+  height: 24px;
+  background: #f5f5f5;
+  display: inline-flex;
+  flex-direction: row;
+  // align-content: center;
+  // justify-content: center;
+  align-items: center;
+  font: normal normal bold 12px Noto Sans CJK KR;
+
+  // p {
+  //   height: 31px;
+  //   // line-height: 10;
+  //   text-align: center;
+  //   vertical-align: middle;
+  // }
+
+  p {
+
+  }
+}
+
+div.binary-switch-left {
+  margin: 3.5px 12px 3.5px 0;
+  color: #a2a5a9;
+}
+
+div.binary-switch-right {
+  padding: 3.5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(69, 76, 82, 0.12);
+  background-color: #fff;
+  color: #454c52;
+}
