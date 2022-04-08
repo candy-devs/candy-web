@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./IssuseCard.css";
+import "./IssuseCard.scss";
 import PropTypes from 'prop-types';
 
 class IssuseCard extends Component {

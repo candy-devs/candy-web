@@ -1,4 +1,4 @@
-import './ArticleHeaderItem.css';
+import './ArticleHeaderItem.scss';
 import React from 'react'
 
 export default function ArticleHeaderItem() {

@@ -2,8 +2,8 @@ import React from "react";
 import ArticleHeaderItem from "./../../components/ArticleHeaderItem";
 import IssuseCard from "../../components/IssuseCard";
 import Navigation from "./Navigation";
-import "./ArticlePage.css";
-import "./HotPage.css";
+import "./ArticlePage.scss";
+import "./HotPage.scss";
 
 function App() {
   return (
