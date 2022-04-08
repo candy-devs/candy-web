@@ -27,15 +27,15 @@ function App() {
             ref: useRef()
           },
           {
-            label: "오른쪽",
+            label: "이슈 태그",
             value: "second",
             ref: useRef()
           },
-          // {
-          //   label: "Third",
-          //   value: "third",
-          //   ref: useRef()
-          // }
+          {
+            label: "인기 게시판",
+            value: "third",
+            ref: useRef()
+          }
         ]}/>
       <div class="issues-area">
         <div class="issues-area-wrap">

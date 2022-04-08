@@ -28,26 +28,26 @@ div.aritcle-header-item-inner-left {
 
 @media only screen {
   div.article-header-title {
-    font: normal normal bold 28px/41px Noto Sans CJK KR;
+    font: normal normal bold 28px/41px Noto Sans KR;
   }
   div.article-header-body-text, div.aritcle-header-item-inner-bottom {
-    font: 14px Noto Sans CJK KR;
+    font: 14px Noto Sans KR;
   }
 }
 
 @media only screen and (max-width: 400px) {
   div.article-header-title {
-    font: normal normal bold 18px/24px Noto Sans CJK KR;
+    font: normal normal bold 18px/24px Noto Sans KR;
   }
   div.article-header-body-text, div.aritcle-header-item-inner-bottom {
-    font: 14px Noto Sans CJK KR;
+    font: 14px Noto Sans KR;
   }
 }
 
 div.article-header-title {
   font-weight: bold;
   text-align: left;
-  /* font: normal normal bold 28px/41px Noto Sans CJK KR; */
+  /* font: normal normal bold 28px/41px Noto Sans KR; */
   letter-spacing: 0px;
 }
 
