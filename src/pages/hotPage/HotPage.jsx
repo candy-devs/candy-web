@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleHeaderItem from "./../../components/ArticleHeaderItem";
+import ArticleHeaderItem from "../../components/ArticleHeaderItem";
 import IssuseCard from "../../components/IssuseCard";
 import Navigation from "./Navigation";
 import "./ArticlePage.scss";
@@ -12,10 +12,10 @@ function App() {
   return (
     <div>
       <Navigation />
-      <div class="nav-box-divider"/>
+      <div class="nav-box-divider" />
       <div class="issues-title">오늘의 이슈</div>
-      <CategoryBinarySwitch/>
-      <IosSegmentedControl 
+      <CategoryBinarySwitch />
+      <IosSegmentedControl
         name="group-2"
         callback={(val) => {}}
         controlRef={useRef()}
@@ -24,19 +24,20 @@ function App() {
           {
             label: "왼쪽",
             value: "first",
-            ref: useRef()
+            ref: useRef(),
           },
           {
             label: "이슈 태그",
             value: "second",
-            ref: useRef()
+            ref: useRef(),
           },
           {
             label: "인기 게시판",
             value: "third",
-            ref: useRef()
-          }
-        ]}/>
+            ref: useRef(),
+          },
+        ]}
+      />
       <div class="issues-area">
         <div class="issues-area-wrap">
           <IssuseCard
