@@ -1,28 +1,46 @@
 
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
 
 div.nav-box {
   display: block;
-  background: #F1F2F6 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 
 div.nav-box-up {
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+@media only screen {
+  div.nav-box-title {
+    font: normal normal bold 40px/48px Roboto;
+    letter-spacing: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  div.nav-box-title {
+    font: normal normal bold 22px/48px Roboto;
+    letter-spacing: 5px;
+  }
+}
+
 div.nav-box-title {
+  padding: 0 0 0 16px;
   text-align: left;
-  font: normal normal bold 40px/48px Roboto;
-  letter-spacing: 12px;
+  /* font: normal normal bold 40px/48px Roboto; */
   color: #191919;
   opacity: 1;
 }
 
 div.nav-box-setting {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
 }
 
 div.nav-box-setting svg path {
@@ -31,29 +49,56 @@ div.nav-box-setting svg path {
   stroke-width: 10;
 }
 
+@media only screen {
+  div.nav-box-tab {
+    font: normal normal bold 34px/45px Noto Sans CJK KR;
+  }
+  div.nav-box-tab-selected {
+    font: normal normal bold 34px/41px  Noto Sans CJK KR;
+  }
+}
+
+/* 34 => 18, -16 47% 63% */
+
+@media only screen and (max-width: 400px) {
+  div.nav-box-tab {
+    font: normal normal bold 18px/44px Roboto;
+  }
+  div.nav-box-tab-selected {
+    font: normal normal bold 18px/44px Roboto;
+  }
+}
+
 div.nav-box-tab {
-  margin: 32px 0 0 0;
-  padding: 0 32px 10px 32px;
+  margin: 12px 0 0 0;
+  /* padding: 0 32px 10px 32px; */
+  /* padding:  */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  font: normal normal bold 30px/45px Noto Sans CJK KR;
+  justify-content: stretch;
   color: #767676;
 }
 
-div.nav-box-tab-selected {
-  font: normal normal bold 34px/41px Roboto;
-  color: #191919;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+div.nav-box-tab-item {
+  flex-grow: 1;
+  text-align: center;
 }
 
-div.nav-box-tab-selected-deco {
-  width: 68px;
-  height: 6px;
-  background: #191919 0% 0% no-repeat padding-box;
-  border-radius: 10px 10px 0px 0px;
+div.nav-box-tab-selected {
+  color: #191919;
   position: relative;
-  bottom: -10px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+div.nav-box-tab-selected::before {
+  background: #191919 0% 0% no-repeat padding-box;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

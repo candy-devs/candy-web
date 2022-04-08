@@ -5,6 +5,7 @@
 * {
   padding: 0px;
   margin: 0px;
+  transition-duration: 300ms;
 }
 
 article.article-header-item {
@@ -25,10 +26,28 @@ div.aritcle-header-item-inner-left {
   flex-direction: column;
 }
 
+@media only screen {
+  div.article-header-title {
+    font: normal normal bold 28px/41px Noto Sans CJK KR;
+  }
+  div.article-header-body-text, div.aritcle-header-item-inner-bottom {
+    font: 14px Noto Sans CJK KR;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  div.article-header-title {
+    font: normal normal bold 18px/24px Noto Sans CJK KR;
+  }
+  div.article-header-body-text, div.aritcle-header-item-inner-bottom {
+    font: 14px Noto Sans CJK KR;
+  }
+}
+
 div.article-header-title {
   font-weight: bold;
   text-align: left;
-  font: normal normal bold 28px/41px Noto Sans CJK KR;
+  /* font: normal normal bold 28px/41px Noto Sans CJK KR; */
   letter-spacing: 0px;
 }
 

@@ -23,7 +23,6 @@ export default function Navigation() {
         <div class="nav-box-tab-item" onClick={() => onClick(1)}>최신</div>
         <div class="nav-box-tab-item nav-box-tab-selected" onClick={() => onClick(2)}>
           HOT
-          <div class="nav-box-tab-selected-deco"></div>
         </div>
         <div class="nav-box-tab-item" onClick={() => onClick(3)}>MY</div>
         <div class="nav-box-tab-item" onClick={() => onClick(4)}>저장</div>

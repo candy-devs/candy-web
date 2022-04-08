@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <Navigation />
+      <div class="nav-box-divider"/>
       <div class="issues-title">오늘의 이슈</div>
       <div class="issues-area">
         <div class="issues-area-wrap">
