@@ -5,6 +5,15 @@ export default function ArticleHeaderItem() {
   return (
     <article class="article-header-item">
       <div class="article-hearder-item-outer-up">
+        <div className='article-header-item-profile-img'/>
+        <div className='article-header-item-profile-name'>
+          박근혜
+        </div>
+        <div className='article-header-item-tag'>
+          #설거지론
+        </div>
+      </div>
+      <div class="article-hearder-item-outer-mid">
         <div class="aritcle-header-item-inner-left">
           <div class="article-header-title">배팅자리만 알면 뭐하나</div>
           <div class="article-header-body">

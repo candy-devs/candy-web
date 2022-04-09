@@ -1,6 +1,7 @@
 
 
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 * {
   padding: 0px;
@@ -18,12 +19,44 @@ article.article-header-item {
 div.article-hearder-item-outer-up {
   display: flex;
   flex-direction: row;
+  padding: 0 0 4px 0;
+  // justify-content: space-between;
+}
+
+div.article-hearder-item-outer-mid {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 div.aritcle-header-item-inner-left {
   display: inline-flex;
   flex-direction: column;
+}
+
+div.article-header-item-profile-img {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border-radius: 7px;
+  background: #a2a5a9 0% 0% no-repeat padding-box;
+  margin: 0 2px 0 0px;
+}
+
+div.article-header-item-profile-name {
+  padding: 0 16px 0 5px;
+  font: 11px Noto Sans KR;
+  color: #6b6f72;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: -0.55px;
+}
+
+div.article-header-item-tag {
+  font: 11px Noto Sans KR;
+  color: #6b6f72;
+  font-size: 11px;
+  letter-spacing: -0.55px;
 }
 
 @media only screen {
@@ -37,35 +70,49 @@ div.aritcle-header-item-inner-left {
 
 @media only screen and (max-width: 400px) {
   div.article-header-title {
-    font: normal normal bold 18px/24px Noto Sans KR;
+    font: normal normal bold 14px/24px Noto Sans KR;
   }
   div.article-header-body-text, div.aritcle-header-item-inner-bottom {
-    font: 14px Noto Sans KR;
+    font: 11px Noto Sans KR;
   }
 }
 
 div.article-header-title {
   font-weight: bold;
   text-align: left;
+  color: #454c52;
   /* font: normal normal bold 28px/41px Noto Sans KR; */
   letter-spacing: 0px;
 }
 
 div.article-header-body {
   margin: 5px 0 0 0;
+  width: 100%;
+  display: inline-block;
+}
+
+div.article-header-body-text {
+  color: #767676;
+  overflow: hidden;
+  text-overflow: clip; 
+  // white-space: nowrap;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 div.article-header-body-thumb {
-  margin: 0 0 0 16px;
+  margin: 0 0 0 7px;
   box-sizing: border-box;
-  width: 120px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
   border-radius: 5px;
   background: #ebebeb 0% 0% no-repeat padding-box;
 }
 
 div.aritcle-header-item-inner-bottom {
-  margin: 16px 0 0 0;
+  margin: 10px 0 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -86,9 +133,13 @@ div.article-header-item-stat {
 
 div.article-header-item-stat-img {
   box-sizing: border-box;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 5px;
   background: #ebebeb 0% 0% no-repeat padding-box;
   margin: 0 2px 0 8px;
+}
+
+div.article-header-item-menu{
+  font-size: 12px;
 }
