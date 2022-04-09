@@ -7,38 +7,20 @@ import "./HotPage.scss";
 import { useRef, useState } from "react";
 import CategoryBinarySwitch from "../../components/CategoryBinarySwitch";
 import IosSegmentedControl from "../../components/IosSegmentedControl";
+import Rank from "./Rank";
+import Divide from "./Divide";
 
 function App() {
   return (
     <div>
       <Navigation />
-      <div class="nav-box-divider" />
-      <div class="issues-title">오늘의 이슈</div>
-      <CategoryBinarySwitch />
-      <IosSegmentedControl
-        name="group-2"
-        callback={(val) => {}}
-        controlRef={useRef()}
-        defaultIndex={1}
-        segments={[
-          {
-            label: "왼쪽",
-            value: "first",
-            ref: useRef(),
-          },
-          {
-            label: "이슈 태그",
-            value: "second",
-            ref: useRef(),
-          },
-          {
-            label: "인기 게시판",
-            value: "third",
-            ref: useRef(),
-          },
-        ]}
-      />
-      <div class="issues-area">
+      {/* <div class="nav-box-divider" /> */}
+      {/* <div class="issues-title">오늘의 이슈</div> */}
+      {/* <CategoryBinarySwitch /> */}
+      <Divide/>
+      <Rank/>
+      <Divide/>
+      {/* <div class="issues-area">
         <div class="issues-area-wrap">
           <IssuseCard
             img="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/24/111406642.3.jpg"
@@ -65,7 +47,7 @@ function App() {
             name="# 윤석열"
           />
         </div>
-      </div>
+      </div> */}
       <ArticleHeaderItem />
       <ArticleHeaderItem />
       <ArticleHeaderItem />

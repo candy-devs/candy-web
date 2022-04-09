@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+div.rank-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font: normal normal  12px Noto Sans KR;
+  font-weight: 400;
+
+  .rank-list-leading {
+    display: flex;
+    flex-direction: row;
+
+    .rank-list-leading-name {
+      padding: 0 0 0 12px;
+    }
+  }
+
+  .rank-list-variance {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    // .rank-list-variance-up {
+    //   // padding: 0 0 0 4px;
+    //   width: 0;
+    //   height: 0;
+    //   border-left: 6px solid transparent;
+    //   border-right: 6px solid transparent;
+    //   border-bottom: 12px solid #555;
+    //   border-radius: 3px;
+    // }
+
+    .rank-list-variance-triangle {
+      margin: 0 0 0 8px;
+      position: relative;
+      text-align: left;
+    }
+    .rank-list-variance-triangle:before,
+    .rank-list-variance-triangle:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+    }
+    .rank-list-variance-triangle,
+    .rank-list-variance-triangle:before,
+    .rank-list-variance-triangle:after {
+      width:  5px;
+      height: 5px;
+      border-top-right-radius: 30%;
+    }
+    
+    .rank-list-variance-triangle-up {
+      background-color: red;
+      transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+    }
+    .rank-list-variance-triangle-up:before {
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+    }
+    .rank-list-variance-triangle-up:after {
+      transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+    }
+
+    .rank-list-variance-triangle-down {
+      background-color: blue;
+      transform: rotate(-240deg) skewX(-30deg) scale(1,.866);
+    }
+    .rank-list-variance-triangle-down:before {
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+    }
+    .rank-list-variance-triangle-down:after {
+      transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+    }
+  }
+}
+
+div.rank-list>div:not(:last-child)::after {
+  content: '';
+  display: block;
+  padding: 8px 0 0 0;
+}

@@ -9,7 +9,7 @@ div.nav-box {
 }
 
 div.nav-box-up {
-  padding: 16px 16px 0 16px;
+  padding: 10px 16px 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ div.nav-box-up {
 }
 
 div.nav-box-title {
-  padding: 0 0 0 16px;
+  // padding: 0 0 0 16px;
   text-align: left;
   /* font: normal normal bold 40px/48px Roboto; */
   color: #191919;
@@ -39,8 +39,8 @@ div.nav-box-title {
 }
 
 div.nav-box-setting {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 18px;
 }
 
 div.nav-box-setting svg path {
@@ -62,15 +62,15 @@ div.nav-box-setting svg path {
 
 @media only screen and (max-width: 400px) {
   div.nav-box-tab {
-    font: normal normal bold 18px/44px Noto Sans KR;
+    font: normal normal bold 14px/44px Noto Sans KR;
   }
   div.nav-box-tab-selected {
-    font: normal normal bold 18px/44px Noto Sans KR;
+    font: normal normal bold 14px/44px Noto Sans KR;
   }
 }
 
 div.nav-box-tab {
-  margin: 12px 0 0 0;
+  // margin: 12px 0 0 0;
   /* padding: 0 32px 10px 32px; */
   /* padding:  */
   display: flex;

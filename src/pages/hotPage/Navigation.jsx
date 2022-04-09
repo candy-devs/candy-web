@@ -25,7 +25,7 @@ export default function Navigation() {
           HOT
         </div>
         <div class="nav-box-tab-item" onClick={() => onClick(3)}>MY</div>
-        <div class="nav-box-tab-item" onClick={() => onClick(4)}>저장</div>
+        <div class="nav-box-tab-item" onClick={() => onClick(4)}>AD</div>
       </div>
     </div>
   );
