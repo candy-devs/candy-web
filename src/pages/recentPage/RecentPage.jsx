@@ -2,6 +2,7 @@ import React from "react";
 import ArticleHeaderItem from "../../components/ArticleHeaderItem";
 import IssuseCard from "../../components/IssuseCard";
 import Navigation from "../common/Navigation";
+import "./RecentPage.scss";
 import { useRef, useState } from "react";
 import CategoryBinarySwitch from "../../components/CategoryBinarySwitch";
 import IosSegmentedControl from "../../components/IosSegmentedControl";
@@ -9,17 +10,13 @@ import SelectButton from "../../components/SelectButton";
 import Rank from "../common/Rank";
 import Divide from "../common/Divide";
 
-import "./HotPage.scss";
-
-function App() {
+export function RecentPage() {
   return (
     <div>
-      <Navigation selected={2}/>
+      <Navigation selected={1} />
       {/* <div class="nav-box-divider" /> */}
       {/* <div class="issues-title">오늘의 이슈</div> */}
       {/* <CategoryBinarySwitch /> */}
-      <Divide />
-      <Rank />
       <Divide />
       <div style={{ padding: "16px" }}>
         <SelectButton />
@@ -61,5 +58,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

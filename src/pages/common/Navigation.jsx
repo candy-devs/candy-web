@@ -1,5 +1,6 @@
 import "./Navigation.scss";
 import React from "react";
+import PropTypes from "prop-types";
 
 const iconGearSolid = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 519 519">
@@ -11,7 +12,9 @@ function onClick(num) {
   console.log("Hello there !!");
 }
 
-export default function Navigation() {
+export default function Navigation({selected}) {
+
+
   return (
     <div class="nav-box">
       <div class="nav-box-up">
@@ -19,14 +22,18 @@ export default function Navigation() {
         <div class="nav-box-setting">{iconGearSolid}</div>
       </div>
       <div class="nav-box-tab">
-        <div class="nav-box-tab-item" onClick={() => onClick(0)}>게시판</div>
-        <div class="nav-box-tab-item" onClick={() => onClick(1)}>최신</div>
-        <div class="nav-box-tab-item nav-box-tab-selected" onClick={() => onClick(2)}>
+        <div class={`nav-box-tab-item ${selected == 0 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(0)}>게시판</div>
+        <div class={`nav-box-tab-item ${selected == 1 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(1)}>최신</div>
+        <div class={`nav-box-tab-item ${selected == 2 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(2)}>
           HOT
         </div>
-        <div class="nav-box-tab-item" onClick={() => onClick(3)}>MY</div>
-        <div class="nav-box-tab-item" onClick={() => onClick(4)}>AD</div>
+        <div class={`nav-box-tab-item ${selected == 3 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(3)}>MY</div>
+        <div class={`nav-box-tab-item ${selected == 4 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(4)}>AD</div>
       </div>
     </div>
   );
 }
+
+Navigation.propTypes = {
+  selected: PropTypes.number.isRequired,
+};

@@ -2,6 +2,9 @@
 // import './App.css';
 import React from 'react';
 import HotPage from './pages/hotPage/HotPage';
+import { RecentPage } from './pages/recentPage/RecentPage';
+import UserPage from './pages/userPage/UserPage';
+
 
 function App() {
   return (
@@ -23,7 +26,7 @@ function App() {
     //   </header>
     // </div>
     <div>
-      <HotPage/>
+      <UserPage/>
     </div>
   );
 }
