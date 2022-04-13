@@ -2,7 +2,11 @@ import React from "react";
 import "./SelectButton.scss";
 import PropTypes from 'prop-types';
 
-function SelectButton({content}) {
+type SelectButtonProps = {
+  content: string,
+}
+
+function SelectButton({content}: SelectButtonProps) {
   return (
     <div className="select-button unselectable">
       <p>{content}</p>

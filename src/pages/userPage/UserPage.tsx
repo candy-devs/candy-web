@@ -8,7 +8,7 @@ import './UserPage.scss';
 export default function UserPage() {
   const [index, setIndex] = useState(0);
 
-  const onChange = function (index) {
+  const onChange = function (index: number) {
     setIndex(index);
   };
 

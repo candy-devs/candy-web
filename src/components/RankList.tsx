@@ -1,7 +1,13 @@
 import React from "react";
 import "./RankList.scss";
 
-function RankListItem({ rank, name, variance }) {
+type RankListItemProps = {
+  rank: string,
+  name: string,
+  variance: number,
+};
+
+function RankListItem({ rank, name, variance }: RankListItemProps) {
   return (
     <div>
       <div className="rank-list-item">
@@ -13,9 +19,8 @@ function RankListItem({ rank, name, variance }) {
           {Math.abs(variance)}
           {variance === 0 ? null : (
             <div
-              className={`rank-list-variance-triangle rank-list-variance-triangle-${
-                variance > 0 ? "up" : "down"
-              }`}
+              className={`rank-list-variance-triangle rank-list-variance-triangle-${variance > 0 ? "up" : "down"
+                }`}
             />
           )}
         </div>

@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import "./NavigationTab.scss";
 
-export default function NavigationTab({ items, onChange }) {
+type NavigationTabProps = {
+  items: string[],
+  onChange: (index: number) => void,
+};
+
+export default function NavigationTab({ items, onChange }: NavigationTabProps) {
   const [selected, setSelected] = useState(0);
 
-  const onClick = function (index) {
+  const onClick = function (index : number) {
     setSelected(index);
     onChange(index);
   };
 
   return (
-    <div class="nav-box-tab">
+    <div className="nav-box-tab">
       {items.map((item, i) => (
         <div
-          class={`nav-box-tab-item ${
+        className={`nav-box-tab-item ${
             selected === i ? "nav-box-tab-selected" : "nav-box-tab-unselected"
           }`}
           onClick={() => onClick(i)}

@@ -9,20 +9,24 @@ const iconGearSolid = (
   </svg>
 );
 
-function onClick(num) {
+function onClick() {
   console.log("Hello there !!");
 }
 
-export default function Navigation({selected}) {
+type NavigationProps = {
+  selected: number;
+}
+
+export default function Navigation({selected}: NavigationProps) {
 
 
   return (
-    <div class="nav-box">
-      <div class="nav-box-up">
-        <div class="nav-box-title">CANDY</div>
-        <div class="nav-box-setting">{iconGearSolid}</div>
+    <div className="nav-box">
+      <div className="nav-box-up">
+        <div className="nav-box-title">CANDY</div>
+        <div className="nav-box-setting">{iconGearSolid}</div>
       </div>
-      <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']}/>
+      <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']} onChange={() => {}}/>
     </div>
   );
 }

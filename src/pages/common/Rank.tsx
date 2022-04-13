@@ -7,10 +7,10 @@ export default function Rank() {
   const [type, setType] = useState(0);
 
   return (
-    <div class="hot-page-rank">
+    <div className="hot-page-rank">
       <IosSegmentedControl
         name="hotPageRank"
-        callback={(val) => setType(val)}
+        callback={(val: number, index: number) => setType(val)}
         controlRef={useRef()}
         defaultIndex={1}
         segments={[

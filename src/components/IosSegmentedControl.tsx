@@ -49,15 +49,24 @@ import "./IosSegmentedControl.scss";
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-a-segmented-control-component
  */
+
+type IosSegmentedControl = {
+  name: string,
+  callback: (val: number, index: number) => void,
+  segments: {label: string, value: number, ref: any}[],
+  defaultIndex: number,
+  controlRef: any,
+};
+
 const IosSegmentedControl = ({
   name,
   segments,
   callback,
   defaultIndex = 0,
   controlRef
-}) => {
+}: IosSegmentedControl) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
-  const componentReady = useRef();
+  const componentReady = useRef<boolean>();
 
   // Determine when the component is "ready"
   useEffect(() => {
@@ -73,7 +82,7 @@ const IosSegmentedControl = ({
     style.setProperty("--highlight-x-pos", `${offsetLeft}px`);
   }, [activeIndex, callback, controlRef, segments]);
 
-  const onInputChange = (value, index) => {
+  const onInputChange = (value: number, index: number) => {
     setActiveIndex(index);
     callback(value, index);
   };
