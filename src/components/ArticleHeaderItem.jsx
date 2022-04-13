@@ -1,17 +1,14 @@
-import './ArticleHeaderItem.scss';
-import React from 'react'
+import "./ArticleHeaderItem.scss";
+import React from "react";
+import { ChatIcon, HeartIcon, ThumbUpIcon } from "../assets/Icons";
 
 export default function ArticleHeaderItem() {
   return (
     <article class="article-header-item">
       <div class="article-hearder-item-outer-up">
-        <div className='article-header-item-profile-img'/>
-        <div className='article-header-item-profile-name'>
-          박근혜
-        </div>
-        <div className='article-header-item-tag'>
-          #설거지론
-        </div>
+        <div className="article-header-item-profile-img" />
+        <div className="article-header-item-profile-name">박근혜</div>
+        <div className="article-header-item-tag">#설거지론</div>
       </div>
       <div class="article-hearder-item-outer-mid">
         <div class="aritcle-header-item-inner-left">
@@ -35,19 +32,23 @@ export default function ArticleHeaderItem() {
           2시간 전
         </p>
         <div class="article-header-item-status">
-          <div class="article-header-item-stat"> 
-            <div class="article-header-item-stat-img"></div>
+          <div class="article-header-item-stat">
+            <div class="article-header-item-stat-icon">
+              <ThumbUpIcon />
+            </div>
             <p>13K</p>
-            <div class="article-header-item-stat-img"></div>
+            <div class="article-header-item-stat-icon">
+              <ChatIcon />
+            </div>
             <p>498</p>
-            <div class="article-header-item-stat-img"></div>
+            <div class="article-header-item-stat-icon">
+              <HeartIcon />
+            </div>
             <p>128</p>
           </div>
-          <div class="article-header-item-menu">
-            &#8942;
-          </div>
+          <div class="article-header-item-menu">&#8942;</div>
         </div>
       </div>
     </article>
-  )
+  );
 }

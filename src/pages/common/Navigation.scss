@@ -85,7 +85,7 @@ div.nav-box-tab-item {
 }
 
 div.nav-box-tab-selected {
-  color: #191919;
+  color: #454c52;
   position: relative;
   /* display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ div.nav-box-tab-selected {
 }
 
 div.nav-box-tab-selected::before {
-  background: #191919 0% 0% no-repeat padding-box;
+  background: #454c52 0% 0% no-repeat padding-box;
   content: '';
   display: block;
   height: 2px;

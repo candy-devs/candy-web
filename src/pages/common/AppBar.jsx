@@ -1,4 +1,5 @@
 import React from "react";
+import { BackIcon } from "../../assets/Icons";
 import "./AppBar.scss";
 
 const iconArrowLeft = (
@@ -11,7 +12,7 @@ export default function AppBar() {
   return (
     <>
       <div className="appbar">
-        <div className="appbar-leading">{iconArrowLeft}</div>
+        <div className="appbar-leading"><BackIcon/></div>
 
         <div className="appbar-title">닉네임_가나다라마바사</div>
 

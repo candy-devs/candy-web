@@ -18,14 +18,6 @@ export function BackIcon() {
             fill="#6b6f72"
           />
         </g>
-        <rect
-          id="사각형_745"
-          data-name="사각형 745"
-          width="32"
-          height="32"
-          transform="translate(400 147)"
-          fill="none"
-        />
       </g>
     </svg>
   );

@@ -26,6 +26,8 @@ function App() {
     //   </header>
     // </div>
     <div>
+      {/* <HotPage/> */}
+      {/* <RecentPage/> */}
       <UserPage/>
     </div>
   );

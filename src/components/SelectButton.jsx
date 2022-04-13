@@ -1,10 +1,17 @@
 import React from "react";
 import "./SelectButton.scss";
+import PropTypes from 'prop-types';
 
-export default function SelectButton() {
+function SelectButton({content}) {
   return (
     <div className="select-button unselectable">
-      <p>게시판 · 태그 선택</p>
+      <p>{content}</p>
     </div>
   );
 }
+
+SelectButton.propTypes = {
+  content: PropTypes.string.isRequired,
+};
+
+export default SelectButton;

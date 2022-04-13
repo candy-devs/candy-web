@@ -18,8 +18,8 @@ export function RecentPage() {
       {/* <div class="issues-title">오늘의 이슈</div> */}
       {/* <CategoryBinarySwitch /> */}
       <Divide />
-      <div style={{ padding: "16px" }}>
-        <SelectButton />
+      <div style={{ padding: "16px", width: "108px" }}>
+        <SelectButton content="게시판 · 태그 선택" />
       </div>
 
       {/* <div class="issues-area">
