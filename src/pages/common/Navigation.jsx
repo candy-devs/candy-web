@@ -1,6 +1,7 @@
 import "./Navigation.scss";
 import React from "react";
 import PropTypes from "prop-types";
+import NavigationTab from "../../components/NavigationTab";
 
 const iconGearSolid = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 519 519">
@@ -21,13 +22,7 @@ export default function Navigation({selected}) {
         <div class="nav-box-title">CANDY</div>
         <div class="nav-box-setting">{iconGearSolid}</div>
       </div>
-      <div class="nav-box-tab">
-        <div class={`nav-box-tab-item ${selected === 0 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(0)}>게시판</div>
-        <div class={`nav-box-tab-item ${selected === 1 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(1)}>최신</div>
-        <div class={`nav-box-tab-item ${selected === 2 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(2)}>HOT</div>
-        <div class={`nav-box-tab-item ${selected === 3 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(3)}>MY</div>
-        <div class={`nav-box-tab-item ${selected === 4 ? 'nav-box-tab-selected' : null}`} onClick={() => onClick(4)}>AD</div>
-      </div>
+      <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']}/>
     </div>
   );
 }

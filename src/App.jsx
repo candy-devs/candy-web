@@ -26,9 +26,9 @@ function App() {
     //   </header>
     // </div>
     <div>
-      {/* <HotPage/> */}
+      <HotPage/>
       {/* <RecentPage/> */}
-      <UserPage/>
+      {/* <UserPage/> */}
     </div>
   );
 }
