@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./NavigationTab.scss";
 
-export default function NavigationTab({ items }) {
+export default function NavigationTab({ items, onChange }) {
   const [selected, setSelected] = useState(0);
 
   const onClick = function (index) {
     setSelected(index);
+    onChange(index);
   };
 
   return (
