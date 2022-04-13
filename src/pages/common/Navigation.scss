@@ -1,7 +1,5 @@
-
 @import url("http://fonts.googleapis.com/css?family=Roboto");
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
-
 
 div.nav-box {
   display: block;
@@ -15,19 +13,9 @@ div.nav-box-up {
   align-items: center;
 }
 
-
-@media only screen {
-  div.nav-box-title {
-    font: normal normal bold 40px/48px Roboto;
-    letter-spacing: 12px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  div.nav-box-title {
-    font: normal normal bold 22px/48px Roboto;
-    letter-spacing: 5px;
-  }
+div.nav-box-title {
+  font: normal normal bold 22px/48px Roboto;
+  letter-spacing: 5px;
 }
 
 div.nav-box-title {

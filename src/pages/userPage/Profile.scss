@@ -33,26 +33,25 @@ div.profile {
     }
   }
 
-  .profile-description{
-    padding: 24px 0 ;
+  .profile-description {
+    padding: 24px 0;
     font: normal normal bold 11px Noto Sans KR;
     color: #454c52;
   }
 
-  .profile-functions
-  {
+  .profile-functions {
     width: 100%;
     max-width: 400px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 
-      .profile-function-button {
-        flex: 1;
-      }
+    .profile-function-button {
+      flex: 1;
+    }
 
-      .profile-function-divider {
-        width: 6px;
-      }
+    .profile-function-divider {
+      width: 6px;
+    }
   }
 }

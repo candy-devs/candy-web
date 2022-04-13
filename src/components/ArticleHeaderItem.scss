@@ -57,26 +57,13 @@ div.article-header-item-tag {
   letter-spacing: -0.55px;
 }
 
-@media only screen {
-  div.article-header-title {
-    font: normal normal bold 28px/41px Noto Sans KR;
-  }
-
-  div.article-header-body-text,
-  div.aritcle-header-item-inner-bottom {
-    font: 14px Noto Sans KR;
-  }
+div.article-header-title {
+  font: normal normal bold 14px/24px Noto Sans KR;
 }
 
-@media only screen and (max-width: 400px) {
-  div.article-header-title {
-    font: normal normal bold 14px/24px Noto Sans KR;
-  }
-
-  div.article-header-body-text,
-  div.aritcle-header-item-inner-bottom {
-    font: 11px Noto Sans KR;
-  }
+div.article-header-body-text,
+div.aritcle-header-item-inner-bottom {
+  font: 11px Noto Sans KR;
 }
 
 div.article-header-title {
