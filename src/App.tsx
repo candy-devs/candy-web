@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import HotPage from './pages/hotPage/HotPage';
 import { RecentPage } from './pages/recentPage/RecentPage';
 import UserPage from './pages/userPage/UserPage';
@@ -14,13 +14,15 @@ function App() {
     setPage(index);
   };
 
-  const pages = [<div/>, <RecentPage/>, <HotPage/>, <UserPage/>, <div/>];
+  const pages = [<div key={0} />, <RecentPage key={1} />, <HotPage key={2} />, <UserPage key={3} />, <div key={4} />];
+
+  // const currentPage = useMemo(() => pages[page], [pages]);
 
   return (
     <div>
-      <Navigation initialPage={2} onChange={onChange}/>
-      <div style={{paddingTop: "90px"}}>
-      {pages[page]}
+      <Navigation initialPage={2} onChange={onChange} />
+      <div style={{ paddingTop: "90px" }}>
+        {pages.map((e, index) => <div style={{ display : index === page ? "" : "none" }}> {e} </div>)}
       </div>
     </div>
   );

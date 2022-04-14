@@ -12,7 +12,6 @@ import Divide from "../common/Divide";
 import "./HotPage.scss";
 
 function App() {
-  console.log('redraw');
   return (
     <div>
       {/* <Navigation selected={2}/> */}
