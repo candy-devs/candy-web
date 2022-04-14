@@ -12,6 +12,17 @@ article.article-header-item {
 
   display: flex;
   flex-direction: column;
+
+  position: relative;
+
+  .article-header-item-linker {
+    bottom: 16px;
+    left: 0;
+    pointer-events: all;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 div.article-hearder-item-outer-up {

@@ -5,6 +5,7 @@ import { ChatIcon, HeartIcon, ThumbUpIcon } from "../assets/Icons";
 export default function ArticleHeaderItem() {
   return (
     <article className="article-header-item">
+      <a href="https://gall.dcinside.com/" className="article-header-item-linker"> </a>
       <div className="article-hearder-item-outer-up">
         <div className="article-header-item-profile-img" />
         <div className="article-header-item-profile-name">박근혜</div>
