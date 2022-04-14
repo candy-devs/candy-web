@@ -3,6 +3,9 @@
 
 div.nav-box {
   display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 30;
   background: #FFFFFF 0% 0% no-repeat padding-box;
 }
 

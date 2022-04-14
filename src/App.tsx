@@ -19,7 +19,9 @@ function App() {
   return (
     <div>
       <Navigation initialPage={2} onChange={onChange}/>
+      <div style={{paddingTop: "90px"}}>
       {pages[page]}
+      </div>
     </div>
   );
 }
