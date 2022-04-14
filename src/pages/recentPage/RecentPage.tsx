@@ -13,7 +13,7 @@ import Divide from "../common/Divide";
 export function RecentPage() {
   return (
     <div>
-      <Navigation selected={1} />
+      {/* <Navigation selected={1} /> */}
       {/* <div class="nav-box-divider" /> */}
       {/* <div class="issues-title">오늘의 이슈</div> */}
       {/* <CategoryBinarySwitch /> */}

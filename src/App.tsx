@@ -1,34 +1,25 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import HotPage from './pages/hotPage/HotPage';
 import { RecentPage } from './pages/recentPage/RecentPage';
 import UserPage from './pages/userPage/UserPage';
 import "./App.scss";
+import Navigation from './pages/common/Navigation';
 
 function App() {
+  const [page, setPage] = useState(2);
+
+  const onChange = function (index: number) {
+    setPage(index);
+  };
+
+  const pages = [<div/>, <RecentPage/>, <HotPage/>, <UserPage/>, <div/>];
+
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-          
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <div>
-      <HotPage/>
-      {/* <RecentPage/> */}
-      {/* <UserPage/> */}
+      <Navigation initialPage={2} onChange={onChange}/>
+      {pages[page]}
     </div>
   );
 }

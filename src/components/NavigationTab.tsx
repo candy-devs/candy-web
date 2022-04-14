@@ -4,10 +4,11 @@ import "./NavigationTab.scss";
 type NavigationTabProps = {
   items: string[],
   onChange: (index: number) => void,
+  initialPage?: number,
 };
 
-export default function NavigationTab({ items, onChange }: NavigationTabProps) {
-  const [selected, setSelected] = useState(0);
+export default function NavigationTab({ items, initialPage, onChange }: NavigationTabProps) {
+  const [selected, setSelected] = useState(initialPage ?? 0);
 
   const onClick = function (index : number) {
     setSelected(index);

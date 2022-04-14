@@ -14,23 +14,18 @@ function onClick() {
 }
 
 type NavigationProps = {
-  selected: number;
+  initialPage: number;
+  onChange: (index: number) => void,
 }
 
-export default function Navigation({selected}: NavigationProps) {
-
-
+export default function Navigation({initialPage, onChange}: NavigationProps) {
   return (
     <div className="nav-box">
       <div className="nav-box-up">
         <div className="nav-box-title">CANDY</div>
         <div className="nav-box-setting">{iconGearSolid}</div>
       </div>
-      <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']} onChange={() => {}}/>
+      <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']} onChange={onChange} initialPage={initialPage}/>
     </div>
   );
 }
-
-Navigation.propTypes = {
-  selected: PropTypes.number.isRequired,
-};

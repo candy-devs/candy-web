@@ -12,9 +12,10 @@ import Divide from "../common/Divide";
 import "./HotPage.scss";
 
 function App() {
+  console.log('redraw');
   return (
     <div>
-      <Navigation selected={2}/>
+      {/* <Navigation selected={2}/> */}
       {/* <div class="nav-box-divider" /> */}
       {/* <div class="issues-title">오늘의 이슈</div> */}
       {/* <CategoryBinarySwitch /> */}
