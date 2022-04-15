@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 div.rank-list-item {
@@ -38,40 +37,46 @@ div.rank-list-item {
       position: relative;
       text-align: left;
     }
+
     .rank-list-variance-triangle:before,
     .rank-list-variance-triangle:after {
       content: '';
       position: absolute;
       background-color: inherit;
     }
+
     .rank-list-variance-triangle,
     .rank-list-variance-triangle:before,
     .rank-list-variance-triangle:after {
-      width:  5px;
+      width: 5px;
       height: 5px;
       border-top-right-radius: 30%;
     }
-    
+
     .rank-list-variance-triangle-up {
       background-color: red;
-      transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+      transform: rotate(-60deg) skewX(-30deg) scale(1, .866);
     }
+
     .rank-list-variance-triangle-up:before {
-      transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
     }
+
     .rank-list-variance-triangle-up:after {
-      transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+      transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
     }
 
     .rank-list-variance-triangle-down {
       background-color: blue;
-      transform: rotate(-240deg) skewX(-30deg) scale(1,.866);
+      transform: rotate(-240deg) skewX(-30deg) scale(1, .866);
     }
+
     .rank-list-variance-triangle-down:before {
-      transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
     }
+
     .rank-list-variance-triangle-down:after {
-      transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+      transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
     }
   }
 }
@@ -94,8 +99,56 @@ div.rank-list {
   flex-direction: row;
   overflow: auto;
   scroll-behavior: smooth;
+
+  // overflow: auto;
+  overflow-x: scroll;
+  // padding-bottom: 17px;
+  // box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -17px;
+}
+
+div.rank-list-wrapper {
+  // overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
 }
 
 div.rank-list-wrapper * {
-  transition-duration: 0ms
+  transition-duration: 0ms;
+}
+
+div.rank-list-dots {
+  position: absolute;
+  width: 100%;
+  top: 130px;
+  display: flex;
+  justify-content: center;
+
+  * {
+    transition-duration: 300ms;
+  }
+
+  .rank-list-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .rank-list-dot:not(:last-child) {
+    margin: 0 8px 0 0 ;
+  }
+
+  .selected {
+    background-color: grey;
+  }
+
+  .unselected {
+    background-color: rgb(231, 231, 231);
+  }
+
 }

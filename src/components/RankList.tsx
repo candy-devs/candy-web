@@ -47,14 +47,22 @@ function RankListPage() {
 
 export default function RankList() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const scrollRef = useRef() as  React.MutableRefObject<HTMLDivElement>;
+  const scrollRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const [width, setWidth] = useState(0);
+  const [pageIndex, setPageIndex] = useState(0);
+
+  var onScrollTimer = -1;
+  var onMouse = false;
+  var onScrolling = false;
+  var onScrollLeft = 0;
 
   useEffect(() => {
     const { style } = ref.current;
     setWidth(ref.current.getBoundingClientRect().width);
     style.setProperty("--rank-list-page-width", `${ref.current.getBoundingClientRect().width}px`);
-  }, [ref]);
+    scrollRef.current.scrollLeft = Math.round(onScrollLeft / width) * width;
+    setPageIndex(Math.round(onScrollLeft / width));
+  }, [ref, scrollRef, onScrollLeft, width]);
 
   const resize = () => {
     const { style, clientWidth } = ref.current;
@@ -69,11 +77,6 @@ export default function RankList() {
     }
   }, [ref]);
 
-  var onScrollTimer = -1;
-  var onMouse = false;
-  var onScrolling = false;
-  var onScrollLeft = 0;
-
   const onScroll = function (event: SyntheticEvent<HTMLDivElement>) {
     onScrolling = true;
     if (onScrollTimer !== -1)
@@ -86,6 +89,7 @@ export default function RankList() {
     if (onMouse === false && onScrolling) {
       onScrolling = false;
       scrollRef.current.scrollLeft = Math.round(onScrollLeft / width) * width;
+      setPageIndex(Math.round(onScrollLeft / width));
     }
   }
 
@@ -109,6 +113,11 @@ export default function RankList() {
         <RankListPage />
         <RankListPage />
         <RankListPage />
+      </div>
+      <div className="rank-list-dots">
+        {[...Array(5).keys()].map((_, index) => (
+          <div className={`rank-list-dot ${index === pageIndex ? 'selected' : 'unselected'}`}></div>
+        ))}
       </div>
     </div>
   );
