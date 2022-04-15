@@ -1,4 +1,4 @@
-import React, { LegacyRef, useCallback, useEffect, useRef } from "react";
+import React, { LegacyRef, SyntheticEvent, useCallback, useEffect, useRef } from "react";
 import { useState } from "react";
 import "./RankList.scss";
 
@@ -47,24 +47,18 @@ function RankListPage() {
 
 export default function RankList() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const scrollRef = useRef() as  React.MutableRefObject<HTMLDivElement>;
   const [width, setWidth] = useState(0);
-
-  const measuredRef = useCallback((node: any) => {
-    if (node !== null) {
-      // setHeight(node.getBoundingClientRect().height);
-      // const { style } = ref.current;
-      // style.setProperty("--rank-list-page-width", `${node.getBoundingClientRect().height}px`);
-      setWidth(node.getBoundingClientRect().width);
-    }
-  }, []);
 
   useEffect(() => {
     const { style } = ref.current;
-    style.setProperty("--rank-list-page-width", `${width}px`);
-  }, [ref, width]);
+    setWidth(ref.current.getBoundingClientRect().width);
+    style.setProperty("--rank-list-page-width", `${ref.current.getBoundingClientRect().width}px`);
+  }, [ref]);
 
-  const resize = (node: Event) => {
+  const resize = () => {
     const { style, clientWidth } = ref.current;
+    setWidth(clientWidth);
     style.setProperty("--rank-list-page-width", `${clientWidth}px`);
   };
 
@@ -75,9 +69,42 @@ export default function RankList() {
     }
   }, [ref]);
 
+  var onScrollTimer = -1;
+  var onMouse = false;
+  var onScrolling = false;
+  var onScrollLeft = 0;
+
+  const onScroll = function (event: SyntheticEvent<HTMLDivElement>) {
+    onScrolling = true;
+    if (onScrollTimer !== -1)
+      clearTimeout(onScrollTimer);
+    onScrollTimer = window.setTimeout(onScrollEnd, 100);
+    onScrollLeft = event.currentTarget.scrollLeft;
+  };
+
+  const onScrollEnd = () => {
+    if (onMouse === false && onScrolling) {
+      onScrolling = false;
+      scrollRef.current.scrollLeft = Math.round(onScrollLeft / width) * width;
+    }
+  }
+
+  const onMouseDown = () => {
+    onMouse = true;
+    if (onScrollTimer !== -1)
+      clearTimeout(onScrollTimer);
+  }
+
+  const onMouseUp = () => {
+    onMouse = false;
+    if (onScrollTimer !== -1)
+      clearTimeout(onScrollTimer);
+    onScrollTimer = window.setTimeout(onScrollEnd, 100);
+  }
+
   return (
     <div ref={ref} className="rank-list-wrapper">
-      <div ref={measuredRef} className="rank-list">
+      <div ref={scrollRef} className="rank-list" onScroll={onScroll} onMouseDown={onMouseDown} onMouseUp={onMouseUp}>
         <RankListPage />
         <RankListPage />
         <RankListPage />

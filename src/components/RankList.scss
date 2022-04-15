@@ -93,6 +93,7 @@ div.rank-list {
   display: flex;
   flex-direction: row;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 div.rank-list-wrapper * {
