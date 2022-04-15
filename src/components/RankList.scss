@@ -5,8 +5,9 @@ div.rank-list-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font: normal normal  12px Noto Sans KR;
+  font: normal normal 12px Noto Sans KR;
   font-weight: 400;
+  margin: 0 4px 0 0;
 
   .rank-list-leading {
     display: flex;
@@ -75,8 +76,25 @@ div.rank-list-item {
   }
 }
 
-div.rank-list>div:not(:last-child)::after {
+div.rank-list-page {
+  width: var(--rank-list-page-width);
+  min-width: var(--rank-list-page-width);
+  max-width: var(--rank-list-page-width);
+}
+
+div.rank-list-page>div:not(:last-child)::after {
   content: '';
   display: block;
   padding: 8px 0 0 0;
+}
+
+div.rank-list {
+  width: var(--rank-list-page-width);
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+div.rank-list-wrapper * {
+  transition-duration: 0ms
 }

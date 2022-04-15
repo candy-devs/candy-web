@@ -50,7 +50,7 @@ import "./IosSegmentedControl.scss";
  * https://letsbuildui.dev/articles/building-a-segmented-control-component
  */
 
-type IosSegmentedControl = {
+type IosSegmentedControlProps = {
   name: string,
   callback: (val: number, index: number) => void,
   segments: {label: string, value: number, ref: any}[],
@@ -64,7 +64,7 @@ const IosSegmentedControl = ({
   callback,
   defaultIndex = 0,
   controlRef
-}: IosSegmentedControl) => {
+}: IosSegmentedControlProps) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
   const componentReady = useRef<boolean>();
 
