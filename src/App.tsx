@@ -7,6 +7,7 @@ import UserPage from './pages/userPage/UserPage';
 import "./App.scss";
 import Navigation from './pages/common/Navigation';
 import BottomNavigation from './pages/common/BottomNavigation';
+import MyPage from './pages/myPage/MyPage';
 
 function App() {
   const [page, setPage] = useState(2);
@@ -15,7 +16,7 @@ function App() {
     setPage(index);
   };
 
-  const pages = [<div key={0} />, <RecentPage key={1} />, <HotPage key={2} />, <UserPage key={3} />, <div key={4} />];
+  const pages = [<div key={0} />, <RecentPage key={1} />, <HotPage key={2} />, <MyPage key={3} />, <UserPage key={4} />];
 
   // const currentPage = useMemo(() => pages[page], [pages]);
 
