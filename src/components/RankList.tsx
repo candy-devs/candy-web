@@ -79,6 +79,9 @@ export default function RankList() {
 
   const onScroll = function (event: SyntheticEvent<HTMLDivElement>) {
     onScrolling = true;
+    if (onScrollTimer !== -1)
+      clearTimeout(onScrollTimer);
+    onScrollTimer = window.setTimeout(onScrollEnd, 100);
     onScrollLeft = event.currentTarget.scrollLeft;
   };
 
