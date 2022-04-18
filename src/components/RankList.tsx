@@ -34,7 +34,7 @@ function RankListPage() {
   // const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
   // ref.current.style.setProperty("--rank-list-page-width", `100px`);
 
-  return <div className="rank-list-page">
+  return <div className="rank-list-page" style={{padding: "0"}}>
     <RankListItem rank="1" name="정치 사회" variance={20} />
     <RankListItem rank="2" name="코인" variance={30} />
     <RankListItem rank="3" name="주식" variance={6} />

@@ -6,7 +6,8 @@ div.rank-list-item {
   justify-content: space-between;
   font: normal normal 12px Noto Sans KR;
   font-weight: 400;
-  margin: 0 4px 0 0;
+  // margin: 0 32px 0 0;
+  padding: 0 16px 0 16px;
 
   .rank-list-leading {
     display: flex;
@@ -140,7 +141,7 @@ div.rank-list-dots {
   }
 
   .rank-list-dot:not(:last-child) {
-    margin: 0 8px 0 0 ;
+    margin: 0 8px 0 0;
   }
 
   .selected {
