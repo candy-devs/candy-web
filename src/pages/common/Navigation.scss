@@ -30,12 +30,13 @@ div.nav-box-title {
 }
 
 div.nav-box-setting {
-  width: 18px;
-  height: 18px;
-}
+  svg {
+    fill: #454c52;
+    width: 28px;
+    height: 28px;
 
-div.nav-box-setting svg path {
-  fill: transparent;
-  stroke: black;
-  stroke-width: 10;
+    path {
+      stroke-width: 0;
+    }
+  }
 }

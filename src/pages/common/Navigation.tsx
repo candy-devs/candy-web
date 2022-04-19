@@ -2,6 +2,7 @@ import "./Navigation.scss";
 import React from "react";
 import PropTypes from "prop-types";
 import NavigationTab from "../../components/NavigationTab";
+import { SettingIcon } from "../../assets/Icons";
 
 const iconGearSolid = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 519 519">
@@ -23,7 +24,7 @@ export default function Navigation({initialPage, onChange}: NavigationProps) {
     <div className="nav-box">
       <div className="nav-box-up">
         <div className="nav-box-title">CANDY</div>
-        <div className="nav-box-setting">{iconGearSolid}</div>
+        <div className="nav-box-setting">{SettingIcon()}</div>
       </div>
       <NavigationTab items={['게시판', '최신', 'HOT', 'MY', 'AD']} onChange={onChange} initialPage={initialPage}/>
     </div>
