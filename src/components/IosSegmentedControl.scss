@@ -110,6 +110,12 @@
 //   cursor: default;
 // }
 
+.controls-container * {
+  cursor: none;
+
+  user-select: none;
+}
+
 .selected-item {
   text-align: center;
 }
@@ -140,7 +146,7 @@
   left: 0;
   position: absolute;
   width: 100%;
-  cursor: pointer;
+  // cursor: pointer;
   height: 100%;
 }
 
@@ -154,7 +160,7 @@
 }
 
 .segment label {
-  cursor: pointer;
+  // cursor: pointer;
   // display: block;
   font-weight: 700;
   padding: 4px;
