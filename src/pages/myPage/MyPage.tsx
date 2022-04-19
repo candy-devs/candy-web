@@ -3,13 +3,14 @@ import ArticleHeaderItem from '../../components/ArticleHeaderItem'
 import HorizontalScroll from '../../components/HorizontalScroll';
 import IosSegmentedControl from '../../components/IosSegmentedControl'
 import SelectButton from '../../components/SelectButton'
+import './MyPage.scss'
 
 export default function MyPage() {
   const [type, setType] = useState(0);
 
   return (
     <div>
-      <div className='my-setting-panel' style={{ padding: "16px" }}>
+      <div className='my-setting-panel' style={{ padding: "16px 0 12px 16px" }}>
         <IosSegmentedControl
           name="hotPageRank"
           callback={(val: number, index: number) => setType(val)}
@@ -31,13 +32,14 @@ export default function MyPage() {
       </div>
         <div style={{ height: "40px" }}>
           <HorizontalScroll>
-            {[...Array(8).keys()].map((_, index) =>
-              <div style={{ minWidth: "140px" }}>
-                <SelectButton content={index.toString()} />
+            {['박근혜', '드라큘라', '정치 · 사회', ...Array(8).keys()].map((content, index) =>
+              <div style={{ minWidth: "72px", padding: "0 4px 0 0" }}>
+                <SelectButton content={typeof content === 'string' ? content : index.toString()}/>
               </div>
             )}
           </HorizontalScroll>
         </div>
+        <div className='my-divider'/>
       <div style={{ padding: "16px" }}>
         <ArticleHeaderItem />
         <ArticleHeaderItem />
