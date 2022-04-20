@@ -79,8 +79,10 @@ export default function RankList() {
 
   const resize = () => {
     const { style, clientWidth } = ref.current;
-    setWidth(clientWidth);
-    style.setProperty("--rank-list-page-width", `${clientWidth}px`);
+    if (clientWidth !== 0) {
+      setWidth(clientWidth);
+      style.setProperty("--rank-list-page-width", `${clientWidth}px`);
+    }
   };
 
   useEffect(() => {
