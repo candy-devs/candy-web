@@ -6,7 +6,7 @@ import IosSegmentedControl from "../../../components/IosSegmentedControl";
 import SelectButton from "../../../components/SelectButton";
 import "./MyTab.scss";
 
-export default function MyPage() {
+export default function MyTab() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
   const [type, setType] = useState(0);
   const [panelDown, setPanelDown] = useState(false);

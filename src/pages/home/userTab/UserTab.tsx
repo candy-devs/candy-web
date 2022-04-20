@@ -15,7 +15,7 @@ export default function UserTab() {
   const pages= [<ArticleList/>];
 
   return (
-    <div className="userpage">
+    <div className="user-tab">
       <AppBar />
       <Profile />
       <NavigationTab items={["게시글", "댓글", "방명록"]} onChange={onChange}/>

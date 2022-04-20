@@ -11,7 +11,7 @@ import Divide from "../../common/Divide";
 
 import "./HotTab.scss";
 
-function App() {
+function HotTab() {
   return (
     <div>
       {/* <Navigation selected={2}/> */}
@@ -62,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default HotTab;
