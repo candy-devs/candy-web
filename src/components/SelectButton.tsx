@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 type SelectButtonProps = {
   content: string,
+  onClick?: () => void,
 }
 
-function SelectButton({content}: SelectButtonProps) {
+function SelectButton({content, onClick}: SelectButtonProps) {
   return (
-    <div className="select-button unselectable">
+    <div className="select-button unselectable" onClick={onClick}>
       <p>{content}</p>
     </div>
   );

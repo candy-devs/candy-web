@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ArticleHeaderItem from "../../../components/ArticleHeaderItem";
 import IssuseCard from "../../../components/IssuseCard";
 import Navigation from "../../common/Navigation";
@@ -10,22 +10,39 @@ import Rank from "../../common/Rank";
 import Divide from "../../common/Divide";
 
 import "./HotTab.scss";
+import SelectArticleTagTab from "../../selectArticleTag/SelectArticleTagPage";
+import { SelectArticleTagDialog } from "../../../controller/SelectArticleTag";
 
 function HotTab() {
-  return (
-    <div>
-      {/* <Navigation selected={2}/> */}
-      {/* <div class="nav-box-divider" /> */}
-      {/* <div class="issues-title">오늘의 이슈</div> */}
-      {/* <CategoryBinarySwitch /> */}
-      <Divide />
-      <Rank />
-      <Divide />
-      <div style={{ padding: "16px", width: "108px" }}>
-        <SelectButton content="게시판 · 태그 선택"/>
-      </div>
+  const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
 
-      {/* <div class="issues-area">
+  const onArticleTagSelectClick = function () {
+    const { style } = ref.current;
+    style.setProperty(
+      "display",
+      "block"
+    );
+  };
+
+  return (
+    <>
+      <div className="hot-tab">
+        {/* <Navigation selected={2}/> */}
+        {/* <div class="nav-box-divider" /> */}
+        {/* <div class="issues-title">오늘의 이슈</div> */}
+        {/* <CategoryBinarySwitch /> */}
+        <Divide />
+        <Rank />
+        <Divide />
+        <div style={{ padding: "16px", width: "108px" }}>
+          {/* <SelectButton
+            content="게시판 · 태그 선택"
+            onClick={onArticleTagSelectClick}
+          /> */}
+          <SelectArticleTagDialog/>
+        </div>
+
+        {/* <div class="issues-area">
         <div class="issues-area-wrap">
           <IssuseCard
             img="https://dimg.donga.com/wps/NEWS/IMAGE/2022/01/24/111406642.3.jpg"
@@ -53,12 +70,13 @@ function HotTab() {
           />
         </div>
       </div> */}
-      <div style={{ padding: "0 16px 16px 16px" }}>
-        <ArticleHeaderItem />
-        <ArticleHeaderItem />
-        <ArticleHeaderItem />
+        <div style={{ padding: "0 16px 16px 16px" }}>
+          <ArticleHeaderItem />
+          <ArticleHeaderItem />
+          <ArticleHeaderItem />
+        </div>
       </div>
-    </div>
+      </>
   );
 }
 
