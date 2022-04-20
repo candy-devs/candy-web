@@ -17,7 +17,8 @@ div.nav-box-tab {
 }
 
 div.nav-box-tab-item {
-  flex-grow: 1;
+  // https://stackoverflow.com/a/29503264/3355656
+  flex: 1 1 0px;
   text-align: center;
 }
 
