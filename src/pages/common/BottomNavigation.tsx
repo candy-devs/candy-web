@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react'
-import { HeartIcon, HomeIcon, PencilIcon, SearchIcon } from '../../assets/Icons'
+import { HeartBreakIcon,  HomeIcon, PencilIcon, SearchIcon } from '../../assets/Icons'
 import './BottomNavigation.scss'
 
 type BottomNavigationProps = {
@@ -16,7 +16,7 @@ export default function BottomNavigation({ onChange }: BottomNavigationProps) {
     onChange!(index);
   };
 
-  const icons = [<HomeIcon />, <SearchIcon />, <PencilIcon />, <HeartIcon />, <HomeIcon />];
+  const icons = [<HomeIcon />, <SearchIcon />, <PencilIcon />, <HeartBreakIcon />, <HomeIcon />];
 
   return (
     <div className='bottom-nav-box'>
