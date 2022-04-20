@@ -2,10 +2,19 @@ import "./ArticleHeaderItem.scss";
 import React from "react";
 import { ChatIcon, HeartIcon, ThumbUpIcon } from "../assets/Icons";
 
-export default function ArticleHeaderItem() {
+type ArticleHeaderItemType = {
+  article?: Partial<ArticleAttributes>;
+};
+
+export default function ArticleHeaderItem({ article }: ArticleHeaderItemType) {
   return (
     <article className="article-header-item">
-      <a href="https://gall.dcinside.com/" className="article-header-item-linker"> </a>
+      <a
+        href="https://gall.dcinside.com/"
+        className="article-header-item-linker"
+      >
+        {" "}
+      </a>
       <div className="article-hearder-item-outer-up">
         <div className="article-header-item-profile-img" />
         <div className="article-header-item-profile-name">박근혜</div>

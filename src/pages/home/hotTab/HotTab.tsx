@@ -9,7 +9,7 @@ import SelectButton from "../../../components/SelectButton";
 import Rank from "../../common/Rank";
 import Divide from "../../common/Divide";
 
-import "./HotTab.scss";
+import styles from "./HotTab.module.scss";
 import SelectArticleTagTab from "../../selectArticleTag/SelectArticleTagPage";
 import { SelectArticleTagDialog } from "../../../controller/SelectArticleTag";
 
