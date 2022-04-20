@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import IosSegmentedControl from "../../../components/IosSegmentedControl";
-import RankList from "../../../components/RankList";
+import IosSegmentedControl from "../../components/IosSegmentedControl";
+import RankList from "../../components/RankList";
 import "./Rank.scss";
 
 export default function Rank() {

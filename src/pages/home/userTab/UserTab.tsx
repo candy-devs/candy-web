@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavigationTab from "../../../components/NavigationTab";
-import AppBar from "../common/AppBar";
+import AppBar from "../../common/AppBar";
 import ArticleList from "./ArticleList";
 import Profile from "./Profile";
 import './UserTab.scss';

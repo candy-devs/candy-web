@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { HeartBreakIcon,  HomeIcon, PencilIcon, SearchIcon } from '../../../assets/Icons'
+import { HeartBreakIcon,  HomeIcon, PencilIcon, SearchIcon } from '../../assets/Icons'
 import './BottomNavigation.scss'
 
 type BottomNavigationProps = {

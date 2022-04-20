@@ -4,8 +4,8 @@ import { useState } from "react";
 import HotTab from "./hotTab/HotTab";
 import { RecentTab } from "./recentTab/RecentTab";
 import UserTab from "./userTab/UserTab";
-import Navigation from "./common/Navigation";
-import BottomNavigation from "./common/BottomNavigation";
+import Navigation from "../common/Navigation";
+import BottomNavigation from "../common/BottomNavigation";
 import MyTab from "./myTab/MyTab";
 
 function HomePage() {

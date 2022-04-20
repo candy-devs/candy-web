@@ -1,13 +1,13 @@
 import React from "react";
 import ArticleHeaderItem from "../../../components/ArticleHeaderItem";
 import IssuseCard from "../../../components/IssuseCard";
-import Navigation from "../common/Navigation";
+import Navigation from "../../common/Navigation";
 import { useRef, useState } from "react";
 import CategoryBinarySwitch from "../../../components/CategoryBinarySwitch";
 import IosSegmentedControl from "../../../components/IosSegmentedControl";
 import SelectButton from "../../../components/SelectButton";
-import Rank from "../common/Rank";
-import Divide from "../common/Divide";
+import Rank from "../../common/Rank";
+import Divide from "../../common/Divide";
 
 import "./HotTab.scss";
 
