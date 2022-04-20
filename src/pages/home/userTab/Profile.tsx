@@ -1,5 +1,5 @@
 import React from "react";
-import SelectButton from "../../components/SelectButton";
+import SelectButton from "../../../components/SelectButton";
 import "./Profile.scss";
 
 export default function Profile() {

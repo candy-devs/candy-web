@@ -1,7 +1,8 @@
 
 
 import React, { useState } from 'react'
-import { HeartBreakIcon,  HomeIcon, PencilIcon, SearchIcon } from '../../assets/Icons'
+import { Link } from 'react-router-dom';
+import { HeartBreakIcon,  HomeIcon, PencilIcon, SearchIcon } from '../../../assets/Icons'
 import './BottomNavigation.scss'
 
 type BottomNavigationProps = {
@@ -17,17 +18,18 @@ export default function BottomNavigation({ onChange }: BottomNavigationProps) {
   };
 
   const icons = [<HomeIcon />, <SearchIcon />, <PencilIcon />, <HeartBreakIcon />, <HomeIcon />];
+  const route = ['/home', '/search', '/write', '/bookmark', '/profile'];
 
   return (
-    <div className='bottom-nav-box'>
+    <nav className='bottom-nav-box'>
       <div className="bottom-nav-box-divider" />
       <div className='bottom-nav-box-icons'>
         {icons.map((icon, index) =>
-          <div className={`bottom-nav-box-icon ${index === selected ? 'selected' : ''}`} onClick={() => onClick(index)}>
+          <Link to={route[index]} className={`bottom-nav-box-icon ${index === selected ? 'selected' : ''}`} onClick={() => onClick(index)}>
             {icon}
-          </div>
+          </Link>
         )}
       </div>
-    </div>
+    </nav>
   )
 }

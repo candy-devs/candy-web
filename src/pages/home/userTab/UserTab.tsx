@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import NavigationTab from "../../components/NavigationTab";
+import NavigationTab from "../../../components/NavigationTab";
 import AppBar from "../common/AppBar";
 import ArticleList from "./ArticleList";
 import Profile from "./Profile";
-import './UserPage.scss';
+import './UserTab.scss';
 
-export default function UserPage() {
+export default function UserTab() {
   const [index, setIndex] = useState(0);
 
   const onChange = function (index: number) {

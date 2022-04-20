@@ -1,8 +1,8 @@
 import "./Navigation.scss";
 import React from "react";
 import PropTypes from "prop-types";
-import NavigationTab from "../../components/NavigationTab";
-import { SettingIcon } from "../../assets/Icons";
+import NavigationTab from "../../../components/NavigationTab";
+import { SettingIcon } from "../../../assets/Icons";
 
 const iconGearSolid = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 519 519">

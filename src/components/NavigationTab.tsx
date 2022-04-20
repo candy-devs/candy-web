@@ -16,7 +16,7 @@ export default function NavigationTab({ items, initialPage, onChange }: Navigati
   };
 
   return (
-    <div className="nav-box-tab">
+    <nav className="nav-box-tab">
       {items.map((item, i) => (
         <div
         className={`nav-box-tab-item ${
@@ -27,6 +27,6 @@ export default function NavigationTab({ items, initialPage, onChange }: Navigati
           {item}
         </div>
       ))}
-    </div>
+    </nav>
   );
 }

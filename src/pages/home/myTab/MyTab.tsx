@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { DownIcon } from "../../assets/Icons";
-import ArticleHeaderItem from "../../components/ArticleHeaderItem";
-import HorizontalScroll from "../../components/HorizontalScroll";
-import IosSegmentedControl from "../../components/IosSegmentedControl";
-import SelectButton from "../../components/SelectButton";
-import "./MyPage.scss";
+import { DownIcon } from "../../../assets/Icons";
+import ArticleHeaderItem from "../../../components/ArticleHeaderItem";
+import HorizontalScroll from "../../../components/HorizontalScroll";
+import IosSegmentedControl from "../../../components/IosSegmentedControl";
+import SelectButton from "../../../components/SelectButton";
+import "./MyTab.scss";
 
 export default function MyPage() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
@@ -13,6 +13,7 @@ export default function MyPage() {
 
   useEffect(() => {
     const { style } = ref.current;
+    // TODO: https://stackoverflow.com/a/31030214/3355656
     // style.setProperty("--my-setting-panel-down-height", `${ref.current.getBoundingClientRect().height}px`);
     style.setProperty("--my-setting-panel-height", `${panelDown ? 150 : 100}px`);
     style.setProperty("--my-setting-panel-down-rotate", panelDown ? '0.5turn' : '0');

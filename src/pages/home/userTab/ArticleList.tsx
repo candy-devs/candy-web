@@ -1,5 +1,5 @@
 import React from 'react'
-import ArticleHeaderItem from '../../components/ArticleHeaderItem'
+import ArticleHeaderItem from '../../../components/ArticleHeaderItem'
 
 export default function ArticleList() {
   return (

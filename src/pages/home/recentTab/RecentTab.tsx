@@ -1,28 +1,25 @@
 import React from "react";
-import ArticleHeaderItem from "../../components/ArticleHeaderItem";
-import IssuseCard from "../../components/IssuseCard";
+import ArticleHeaderItem from "../../../components/ArticleHeaderItem";
+import IssuseCard from "../../../components/IssuseCard";
 import Navigation from "../common/Navigation";
+import "./RecentTab.scss";
 import { useRef, useState } from "react";
-import CategoryBinarySwitch from "../../components/CategoryBinarySwitch";
-import IosSegmentedControl from "../../components/IosSegmentedControl";
-import SelectButton from "../../components/SelectButton";
+import CategoryBinarySwitch from "../../../components/CategoryBinarySwitch";
+import IosSegmentedControl from "../../../components/IosSegmentedControl";
+import SelectButton from "../../../components/SelectButton";
 import Rank from "../common/Rank";
 import Divide from "../common/Divide";
 
-import "./HotPage.scss";
-
-function App() {
+export function RecentTab() {
   return (
     <div>
-      {/* <Navigation selected={2}/> */}
+      {/* <Navigation selected={1} /> */}
       {/* <div class="nav-box-divider" /> */}
       {/* <div class="issues-title">오늘의 이슈</div> */}
       {/* <CategoryBinarySwitch /> */}
       <Divide />
-      <Rank />
-      <Divide />
       <div style={{ padding: "16px", width: "108px" }}>
-        <SelectButton content="게시판 · 태그 선택"/>
+        <SelectButton content="게시판 · 태그 선택" />
       </div>
 
       {/* <div class="issues-area">
@@ -61,5 +58,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

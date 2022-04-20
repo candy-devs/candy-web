@@ -1,13 +1,10 @@
 // import logo from './logo.svg';
 // import './App.css';
-import React, { useMemo, useState } from 'react';
-import HotPage from './pages/hotPage/HotPage';
-import { RecentPage } from './pages/recentPage/RecentPage';
-import UserPage from './pages/userPage/UserPage';
+import React, { useMemo, useState } from "react";
+// import HotTab from './pages/home/hotTab/HotTab';
 import "./App.scss";
-import Navigation from './pages/common/Navigation';
-import BottomNavigation from './pages/common/BottomNavigation';
-import MyPage from './pages/myPage/MyPage';
+import { Navigate, Route, Routes } from "react-router";
+import Home from "./pages/home/Home";
 
 function App() {
   const [page, setPage] = useState(2);
@@ -16,17 +13,16 @@ function App() {
     setPage(index);
   };
 
-  const pages = [<div key={0} />, <RecentPage key={1} />, <HotPage key={2} />, <MyPage key={3} />, <UserPage key={4} />];
+  // const pages = [<div key={0} />, <RecentTab key={1} />, <HotTab key={2} />, <MyTab key={3} />, <UserTab key={4} />];
 
   // const currentPage = useMemo(() => pages[page], [pages]);
 
   return (
     <div>
-      <Navigation initialPage={2} onChange={onChange} />
-      <BottomNavigation />
-      <div style={{ paddingTop: "90px", paddingBottom: "43px" }}>
-        {pages.map((e, index) => <div style={{ display : index === page ? "" : "none" }}> {e} </div>)}
-      </div>
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </div>
   );
 }

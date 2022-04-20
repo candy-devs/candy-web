@@ -1,5 +1,5 @@
 import React from "react";
-import { BackIcon } from "../../assets/Icons";
+import { BackIcon } from "../../../assets/Icons";
 import "./AppBar.scss";
 
 const iconArrowLeft = (
