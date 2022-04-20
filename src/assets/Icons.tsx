@@ -246,7 +246,7 @@ export function PencilIcon() {
   );
 }
 
-export function HeartIcon() {
+export function HeartBreakIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -404,7 +404,7 @@ export function ChatIcon() {
   );
 }
 
-export function HearctIcon() {
+export function HeartIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -433,6 +433,87 @@ export function HearctIcon() {
           transform="translate(5221.199 3368.682)"
           fill="none"
           stroke="#6b6f72"
+          stroke-miterlimit="10"
+          stroke-width="2"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function UpIcon() {
+  return (
+    <svg
+      id="그룹_1067"
+      data-name="그룹 1067"
+      xmlns="http://www.w3.org/2000/svg"
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+    >
+      <rect
+        id="사각형_848"
+        data-name="사각형 848"
+        width="36"
+        height="36"
+        fill="none"
+      />
+      <g id="그룹_1005" data-name="그룹 1005" transform="translate(8 13)">
+        <line
+          id="선_122"
+          data-name="선 122"
+          y1="10"
+          x2="10"
+          fill="none"
+          stroke="#454C52"
+          stroke-linecap="round"
+          stroke-width="4"
+        />
+        <line
+          id="선_123"
+          data-name="선 123"
+          x1="10"
+          y1="10"
+          transform="translate(10)"
+          fill="none"
+          stroke="#454C52"
+          stroke-linecap="round"
+          stroke-width="4"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function DownIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      viewBox="0 0 30 30"
+    >
+      <g
+        id="그룹_940"
+        data-name="그룹 940"
+        transform="translate(-551.002 -698)"
+      >
+        <rect
+          id="사각형_259"
+          data-name="사각형 259"
+          width="30"
+          height="30"
+          transform="translate(551.002 698)"
+          fill="none"
+          opacity="0.2"
+        />
+        <path
+          id="패스_110"
+          data-name="패스 110"
+          d="M-4655.2-2646.418l-8.668-8.687a5.774,5.774,0,0,1,0-8.153,5.747,5.747,0,0,1,8.134,0l.535.536.534-.536a5.747,5.747,0,0,1,8.134,0,5.774,5.774,0,0,1,0,8.153Z"
+          transform="translate(5221.199 3368.682)"
+          fill="none"
+          stroke="#6B6F72"
           stroke-miterlimit="10"
           stroke-width="2"
         />
