@@ -31,7 +31,7 @@ function HomePage() {
       <BottomNavigation />
       <div style={{ paddingTop: "90px", paddingBottom: "43px" }}>
         {pages.map((e, index) => (
-          <div style={{ display: index === page ? "" : "none" }}> {e} </div>
+          <div key={index} style={{ display: index === page ? "" : "none" }}> {e} </div>
         ))}
       </div>
     </div>

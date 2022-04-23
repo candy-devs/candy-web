@@ -56,7 +56,7 @@ export default function MyTab() {
           <HorizontalScroll>
             {["박근혜", "드라큘라", "정치 · 사회", ...Array(8).keys()].map(
               (content, index) => (
-                <div style={{ minWidth: "72px", padding: "0 4px 0 0" }}>
+                <div key={index} style={{ minWidth: "72px", padding: "0 4px 0 0" }}>
                   <SelectButton
                     content={
                       typeof content === "string" ? content : index.toString()

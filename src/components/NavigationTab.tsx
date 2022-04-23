@@ -17,12 +17,12 @@ export default function NavigationTab({ items, initialPage, onChange }: Navigati
 
   return (
     <nav className="nav-box-tab">
-      {items.map((item, i) => (
-        <div
+      {items.map((item, index) => (
+        <div key={index}
         className={`nav-box-tab-item ${
-            selected === i ? "nav-box-tab-selected" : "nav-box-tab-unselected"
+            selected === index ? "nav-box-tab-selected" : "nav-box-tab-unselected"
           }`}
-          onClick={() => onClick(i)}
+          onClick={() => onClick(index)}
         >
           {item}
         </div>

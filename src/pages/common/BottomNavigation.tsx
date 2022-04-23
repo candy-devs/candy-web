@@ -35,7 +35,7 @@ export default function BottomNavigation({ onChange }: BottomNavigationProps) {
       <div className={styles.BottomNavBoxDivider} />
       <div className={styles.BottomNavBoxIcons}>
         {icons.map((icon, index) => (
-          <Link
+          <Link key={index}
             to={route[index]}
             className={`${styles.BottomNavBoxIcon} ${
               index === selected ? styles.Selected : ""

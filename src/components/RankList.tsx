@@ -134,7 +134,7 @@ export default function RankList() {
       </div>
       <div className="rank-list-dots">
         {[...Array(4).keys()].map((_, index) => (
-          <div
+          <div key={index}
             className={`rank-list-dot ${
               index === pageIndex ? "selected" : "unselected"
             }`}

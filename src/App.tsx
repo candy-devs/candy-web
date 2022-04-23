@@ -1,12 +1,10 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React, { useMemo, useState } from "react";
-// import HotTab from './pages/home/hotTab/HotTab';
 import "./App.scss";
 import { Navigate, Route, Routes } from "react-router";
 import Home from "./pages/home/Home";
 
 function App() {
+
   const [page, setPage] = useState(2);
 
   const onChange = function (index: number) {
