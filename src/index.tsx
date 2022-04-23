@@ -4,6 +4,16 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { requestSession } from './api/Session';
+import { getCookie } from './utils/Cookie';
+
+function init() {
+  if (getCookie("connect.sid") === null) {
+    requestSession();
+  }
+}
+
+init();
 
 ReactDOM.render(
   <BrowserRouter>
