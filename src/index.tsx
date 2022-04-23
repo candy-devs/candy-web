@@ -4,8 +4,6 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { requestSession } from "./api/Session";
-import { getCookie } from "./utils/Cookie";
 
 ReactDOM.render(
   <BrowserRouter>

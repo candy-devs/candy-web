@@ -1,25 +1,21 @@
-import React, { useMemo, useState } from "react";
 import "./App.scss";
 import { Navigate, Route, Routes } from "react-router";
-import Home from "./pages/home/Home";
+import SearchPage from "./pages/search/SearchPage";
+import HomePage from "./pages/home/HomePage";
+import ProfilePage from "./pages/profile/ProfilePage";
+import BookmarkPage from "./pages/bookmark/BookmarkPage";
+import WritePage from "./pages/write/WritePage";
 
 function App() {
-
-  const [page, setPage] = useState(2);
-
-  const onChange = function (index: number) {
-    setPage(index);
-  };
-
-  // const pages = [<div key={0} />, <RecentTab key={1} />, <HotTab key={2} />, <MyTab key={3} />, <UserTab key={4} />];
-
-  // const currentPage = useMemo(() => pages[page], [pages]);
-
   return (
     <div>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/write" element={<WritePage />} />
+        <Route path="/bookmark" element={<BookmarkPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </div>
   );

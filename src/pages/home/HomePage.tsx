@@ -28,7 +28,7 @@ function HomePage() {
   return (
     <div>
       <Navigation initialPage={2} onChange={onChange} />
-      <BottomNavigation />
+      <BottomNavigation selected={0}/>
       <div style={{ paddingTop: "90px", paddingBottom: "43px" }}>
         {pages.map((e, index) => (
           <div key={index} style={{ display: index === page ? "" : "none" }}> {e} </div>

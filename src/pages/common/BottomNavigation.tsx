@@ -9,14 +9,12 @@ import {
 import styles from "./BottomNavigation.module.scss";
 
 type BottomNavigationProps = {
+  selected: number;
   onChange?: (index: number) => void;
 };
 
-export default function BottomNavigation({ onChange }: BottomNavigationProps) {
-  const [selected, setSelected] = useState(0);
-
+export default function BottomNavigation({ selected, onChange }: BottomNavigationProps) {
   const onClick = function (index: number) {
-    setSelected(index);
     onChange!(index);
   };
 
