@@ -3,8 +3,11 @@ import styles from "./SelectArticleTagPage.module.scss";
 import React, { useRef, useState } from "react";
 import { CloseIcon, SearchIcon } from "../../assets/Icons";
 import IosSegmentedControl from "../../components/IosSegmentedControl";
+import { DialogChildParameter } from "../../controller/dialog/DialogBase";
 
-export default function SelectArticleTagPage() {
+export default function SelectArticleTagPage({
+  onClose,
+}: DialogChildParameter) {
   const [searchType, setSearchType] = useState(0);
 
   return (
@@ -12,7 +15,9 @@ export default function SelectArticleTagPage() {
       <div className={styles.Body}>
         <div className={styles.TitleBar}>
           <span>게시판 · 태그 선택</span>
-          <CloseIcon />
+          <div onClick={onClose}>
+            <CloseIcon />
+          </div>
         </div>
         <div className={styles.SearchArea}>
           <IosSegmentedControl

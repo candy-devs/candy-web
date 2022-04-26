@@ -11,7 +11,7 @@ import Divide from "../../common/Divide";
 
 import styles from "./HotTab.module.scss";
 import SelectArticleTagTab from "../../selectArticleTag/SelectArticleTagPage";
-import { SelectArticleTagDialog } from "../../../controller/SelectArticleTag";
+import { SelectArticleTagDialog } from "../../../controller/dialog/SelectArticleTag";
 
 function HotTab() {
   const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
