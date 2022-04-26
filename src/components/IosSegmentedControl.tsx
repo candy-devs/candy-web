@@ -42,7 +42,6 @@
 import { useRef, useState, useEffect } from "react";
 import "./IosSegmentedControl.scss";
 
-
 // https://letsbuildui.dev/articles/building-a-segmented-control-component
 // https://codesandbox.io/s/react-segmented-control-krgq5?file=/src/App.js:0-41
 /*
@@ -51,11 +50,12 @@ import "./IosSegmentedControl.scss";
  */
 
 type IosSegmentedControlProps = {
-  name: string,
-  callback: (val: number, index: number) => void,
-  segments: {label: string, value: number, ref: any}[],
-  defaultIndex: number,
-  controlRef: any,
+  name: string;
+  callback: (val: number, index: number) => void;
+  segments: { label: string; value: number; ref: any }[];
+  defaultIndex: number;
+  minWitdh?: number;
+  controlRef: any;
 };
 
 const IosSegmentedControl = ({
@@ -63,7 +63,8 @@ const IosSegmentedControl = ({
   segments,
   callback,
   defaultIndex = 0,
-  controlRef
+  minWitdh,
+  controlRef,
 }: IosSegmentedControlProps) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
   const componentReady = useRef<boolean>();
@@ -78,9 +79,14 @@ const IosSegmentedControl = ({
     const { offsetWidth, offsetLeft } = activeSegmentRef.current;
     const { style } = controlRef.current;
 
-    style.setProperty("--highlight-width", `${offsetWidth}px`);
+    if (minWitdh !== undefined) {
+      style.setProperty("--min-width", `${minWitdh}px`);
+      style.setProperty("--highlight-width", `${minWitdh}px`);
+      style.setProperty("--highlight-x-pos", `${minWitdh * activeIndex + 4}px`);
+    } else {style.setProperty("--highlight-width", `${offsetWidth}px`);
     style.setProperty("--highlight-x-pos", `${offsetLeft}px`);
-  }, [activeIndex, callback, controlRef, segments]);
+  }
+  }, [activeIndex, callback, controlRef, segments, minWitdh]);
 
   const onInputChange = (value: number, index: number) => {
     setActiveIndex(index);

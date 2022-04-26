@@ -153,7 +153,8 @@
 .segment {
   /* width: 100%; uncomment for each segment to have matching width */
   // width: 100%;
-  min-width: 70px;
+  // min-width: 70px;
+  min-width: var(--min-width);
   position: relative;
   text-align: center;
   z-index: 1;
